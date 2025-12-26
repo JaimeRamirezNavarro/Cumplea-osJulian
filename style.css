@@ -1,0 +1,308 @@
+:root {
+    --burdeos-noble: #4A0E0E;
+    /* Se queda solo para botones y títulos */
+    --dorado-suave: #C5A059;
+    --crema-papel: #F9F7F2;
+    --texto-oscuro: #1A1A1A;
+    --gris-carbon: #2C2C2C;
+    /* El nuevo color para nav y footer */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--crema-papel);
+    color: var(--texto-oscuro);
+    line-height: 1.8;
+    /* Más espacio entre líneas para lectura fácil */
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: var(--gris-carbon);
+    /* Color distinto al botón */
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #E0E0E0;
+    /* Gris muy claro para que sea legible pero suave */
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado-suave);
+    /* Al pasar el ratón, brilla en dorado */
+}
+
+/* --- Header Majestuoso --- */
+header {
+    /* Mantenemos el degradado oscuro para que el texto blanco sea legible */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('img/img1.png');
+    /* Ruta a tu carpeta img */
+    background-size: cover;
+    background-position: center;
+    /* Mantiene la imagen fija al hacer scroll (efecto elegante) */
+    color: white;
+    text-align: center;
+    padding: 140px 20px;
+    border-bottom: 3px solid var(--dorado-suave);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* --- Botón Formal --- */
+.btn-confirmar {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 45px;
+    background-color: var(--burdeos-noble);
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    /* Menos redondeado = más formal */
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.4s;
+    border: 1px solid var(--burdeos-noble);
+}
+
+.btn-confirmar:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* --- Cuerpo del Homenaje --- */
+.container {
+    max-width: 750px;
+    /* Un poco más estrecho para mejor lectura */
+    margin: 60px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--burdeos-noble);
+    letter-spacing: 1px;
+}
+
+.divisor {
+    width: 50px;
+    height: 3px;
+    background: var(--dorado-suave);
+    margin: 25px auto;
+}
+
+.homenaje p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.texto-emotivo {
+    font-size: 1.3rem;
+    color: var(--burdeos-noble);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Cuadro de Información --- */
+.info-cajas {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 40px 20px;
+    border: 1px solid var(--borde-sutil);
+    margin: 50px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.info-cajas p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.info-cajas strong {
+    color: var(--burdeos-noble);
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* --- Formulario y Galería --- */
+.form-wrapper {
+    background: white;
+    padding: 10px;
+    border: 1px solid var(--borde-sutil);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 100%;
+    /* Asegura que no se desborde */
+    box-sizing: border-box;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: sepia(0.2);
+    /* Toque nostálgico sutil */
+    transition: filter 0.5s;
+}
+
+.gallery img:hover {
+    filter: sepia(0);
+}
+
+/* --- Diseño de Historia (Imagen y Texto alternados) --- */
+.fila-historia {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Invierte el orden visual: la imagen pasa a la izquierda y el texto a la derecha */
+.fila-historia.inversa {
+    flex-direction: row-reverse;
+}
+
+.texto-bloque {
+    flex: 1.5;
+    /* El texto ocupa un poco más de espacio */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.imagen-bloque {
+    flex: 1;
+}
+
+.imagen-bloque img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--borde-sutil);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Footer Unificado --- */
+footer {
+    background-color: var(--gris-carbon);
+    /* Mismo color que el nav */
+    color: #E0E0E0;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.dedicatoria-nieto {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-transform: none;
+    /* Para que no salga todo en mayúsculas */
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    color: var(--dorado-suave);
+    /* Color dorado para resaltar el cariño */
+}
+
+iframe {
+    width: 100%;
+    height: 1000px;
+    /* Aumentamos la altura para que se vea casi todo el formulario sin scroll */
+    border: none;
+    display: block;
+}
+
+/* --- RESPONSIVIDAD PARA MÓVILES --- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    header {
+        padding: 100px 20px;
+        background-attachment: scroll;
+        /* Mejor rendimiento en móvil */
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.75rem;
+    }
+
+    .info-cajas {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .homenaje p {
+        text-align: left;
+        /* En móvil es más cómodo leer a la izquierda */
+        font-size: 1.05rem;
+    }
+
+    iframe {
+        height: 1400px;
+        /* Más espacio para el formulario en vertical */
+    }
+
+    .form-wrapper {
+        padding: 5px;
+        /* Menos padding para aprovechar el ancho de la pantalla */
+    }
+
+    .fila-historia,
+    .fila-historia.inversa {
+        flex-direction: column;
+        /* Se apilan verticalmente */
+        gap: 20px;
+        text-align: left;
+    }
+
+    .imagen-bloque {
+        width: 100%;
+        order: -1;
+        /* En móvil, la imagen siempre saldrá arriba del texto del bloque */
+    }
+
+}
