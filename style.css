@@ -17,6 +17,7 @@ body {
     line-height: 1.8;
     /* Más espacio entre líneas para lectura fácil */
     scroll-behavior: smooth;
+    font-size: 20px;
 }
 
 nav {
@@ -57,7 +58,7 @@ header {
     /* Mantiene la imagen fija al hacer scroll (efecto elegante) */
     color: white;
     text-align: center;
-    padding: 140px 20px;
+    padding: 120px 20px;
     border-bottom: 3px solid var(--dorado-suave);
 }
 
@@ -229,6 +230,7 @@ footer {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-top: 50px;
+
 }
 
 .dedicatoria-nieto {
@@ -255,18 +257,25 @@ iframe {
 /* --- RESPONSIVIDAD PARA MÓVILES --- */
 @media (max-width: 600px) {
     h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
+    }
+
+    body {
+        font-size: 22px;
+        /* Texto todavía más grande en móvil */
     }
 
     header {
         padding: 100px 20px;
         background-attachment: scroll;
+        font-size: 1.4rem;
         /* Mejor rendimiento en móvil */
     }
 
     nav a {
         margin: 0 10px;
-        font-size: 0.75rem;
+        margin: 15px 0;
+        font-size: 1.4rem;
     }
 
     .info-cajas {
@@ -279,6 +288,11 @@ iframe {
         text-align: left;
         /* En móvil es más cómodo leer a la izquierda */
         font-size: 1.05rem;
+    }
+
+    .btn-confirmar {
+        font-size: 1.3rem;
+        padding: 20px;
     }
 
     iframe {
