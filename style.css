@@ -50,7 +50,7 @@ nav a:hover {
 header {
     /* Mantenemos el degradado oscuro para que el texto blanco sea legible */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('img/img1.png');
+        src('img/img1.png');
     /* Ruta a tu carpeta img */
     background-size: cover;
     background-position: center;
@@ -262,14 +262,15 @@ iframe {
         padding: 100px 20px;
         background-attachment: scroll;
         /* Mejor rendimiento en móvil */
-        background-image: url(img/img2.png);
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            src('img/img2.png');
         background-size: cover;
         background-position: center;
     }
 
     nav a {
         margin: 0 10px;
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 
     .info-cajas {
